@@ -34,7 +34,7 @@ export default function Home() {
           <a href="#why">Why Slow</a>
           <a href="#stores">Stores</a>
           <a href="#faq">FAQ</a>
-          {/* <a href="/blogs">Blogs</a> */}
+          <a href="/blogs">Blogs</a>
         </nav>
         <div className="nav-actions">
           <button className="icon-btn" aria-label="Contact" onClick={() => setShowModal(true)}>
@@ -100,7 +100,12 @@ export default function Home() {
       {/* Panels */}
       <section className="panels" aria-label="Story">
         <article className="panel">
-          <div className="panel-media" style={{ "--img": "url('https://placehold.co/1600x1000/png?text=Unhurried+harvest')" } as React.CSSProperties} />
+          <div
+            className="panel-media"
+            style={{
+              "--img": "url('/assets/images/pomegranate/pexels-julia-volk-5272973.jpg')",
+            } as React.CSSProperties}
+          />
           <div className="panel-copy">
             <h2>We believe in slow.</h2>
             <p>Time builds flavour. We harvest only when the fruit is truly ready—never hurried, always honest.</p>
@@ -131,7 +136,12 @@ export default function Home() {
 
       {/* Calm */}
       <section className="calm" aria-label="Calm break">
-        <div className="calm-media" style={{ "--img": "url('https://placehold.co/2000x1200/png?text=We+believe+in+slow')" } as React.CSSProperties} />
+        <div
+          className="calm-media"
+          style={{
+            "--img": "url('/assets/images/pomegranate/pexels-julia-volk-5272973.jpg')",
+          } as React.CSSProperties}
+        />
         <div className="calm-copy">
           <h2>We believe in slow.</h2>
           <p>Slower decisions. Softer days. Better fruit.</p>
