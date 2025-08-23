@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Slow Fruit Matters — being honest</title>
+  <meta name="description" content="The pillars behind better taste and better health — harvest timing, natural ripening, small batches, and gentle handling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html#top" class="brand" aria-label="being honest">
+      <img src="../assets/Asset 2.png" alt="" class="logo" width="170" height="28" />
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#why">Why Slow</a>
+      <a href="../index.html#stores">Stores</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../blogs.html">Blogs</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="openContact" aria-label="Contact"><i data-lucide="mail"></i></button>
+    </div>
+  </header>
+
+  <main class="post">
+    <article class="post-article">
+      <header class="post-header">
+        <p class="post-eyebrow">Philosophy</p>
+        <h1>Why Slow Fruit Matters: From the farm to you</h1>
+        <p class="muted">Slow isn’t a trend — it’s how fruit develops flavour, aroma, and nutrition. Here’s how we practice it every day.</p>
+      </header>
+
+      <figure class="post-hero" style="--img:url('https://placehold.co/1600x900/png?text=Why+Slow+Matters');"></figure>
+
+      <section class="post-content">
+        <h2>Harvest timing</h2>
+        <p>We harvest at physiological maturity — when the plant signals readiness. That’s when sugars, acids, and aroma precursors are in balance. Picking too early and forcing ripening can’t replicate this.</p>
+
+        <h2>Natural ripening</h2>
+        <p>No artificial ripening agents. We give fruit time and airflow, allowing texture and aroma to develop fully. The result is flavour you can’t rush.</p>
+
+        <h2>Small batches</h2>
+        <p>We move fruit in small lots so nothing sits for long. It also means better sorting, less compression, and fewer temperature shocks.</p>
+
+        <h2>Gentle handling</h2>
+        <p>Crates over sacks. Minimal stacking. Clean tools and short distances. The goal is to preserve cell structure so juice stays where it belongs — inside the fruit.</p>
+
+        <h2>Authentic varieties</h2>
+        <p>Each variety has its own seasonality, colour, and flavour profile. We lean into that instead of masking it with shine or dye. Honest fruit looks like itself.</p>
+
+        <h2>Packaging and cold chain</h2>
+        <p>Low‑impact packaging protects without suffocating. When cooling is needed, we use it to slow respiration — not to compensate for poor harvest timing.</p>
+
+        <h2>What this means for you</h2>
+        <ul>
+          <li><strong>More flavour:</strong> Balanced sweetness and acidity, with live aromatics.</li>
+          <li><strong>More trust:</strong> No artificial ripening, no added colour, no wax.</li>
+          <li><strong>More nutrition:</strong> Better vitamin retention and less waterlogging.</li>
+        </ul>
+
+        <p>Slow is our superpower. It’s how we honour growers, land, and your plate.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html#top" class="brand brand--footer">being<span>honest</span></a>
+        <p class="muted">Fruit that respects time. © <span id="year"></span></p>
+      </div>
+      <form id="newsletter" class="newsletter" novalidate>
+        <label>Email for gentle updates</label>
+        <div class="input-wrap">
+          <input type="email" id="email" placeholder="you@example.com" required />
+          <button class="btn small" type="submit">Subscribe</button>
+        </div>
+        <p class="tiny muted">By subscribing you agree to receive occasional emails.</p>
+      </form>
+      <div class="links">
+        <a href="../index.html#stores">Stores</a>
+        <a id="contactOpen" href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="contactModal">
+    <form method="dialog" class="modal">
+      <button class="icon-btn modal-close" aria-label="Close"><i data-lucide="x"></i></button>
+      <h3>Say hello</h3>
+      <p class="muted">We’re here, slowly.</p>
+      <div class="field"><label>Name</label><input type="text" id="cName" required/></div>
+      <div class="field"><label>Email</label><input type="email" id="cEmail" required/></div>
+      <div class="field"><label>Message</label><textarea id="cMsg" rows="4" required></textarea></div>
+      <menu>
+        <button class="btn ghost" value="cancel">Cancel</button>
+        <button class="btn primary" id="sendMsg" value="default">Send</button>
+      </menu>
+    </form>
+  </dialog>
+  <div class="scrim" id="scrim"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../script.js"></script>
+</body>
+</html>
+

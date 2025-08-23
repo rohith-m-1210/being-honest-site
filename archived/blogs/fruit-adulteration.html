@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fruit Adulteration — being honest</title>
+  <meta name="description" content="Learn to spot fruit adulteration — artificial ripening, wax, dyes, and sugar syrups — and how being honest keeps your fruit natural." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="nav">
+    <a href="../index.html#top" class="brand" aria-label="being honest">
+      <img src="../assets/Asset 2.png" alt="" class="logo" width="170" height="28" />
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#why">Why Slow</a>
+      <a href="../index.html#stores">Stores</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../blogs.html">Blogs</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="openContact" aria-label="Contact"><i data-lucide="mail"></i></button>
+    </div>
+  </header>
+
+  <main class="post">
+    <article class="post-article">
+      <header class="post-header">
+        <p class="post-eyebrow">Guide</p>
+        <h1>Fruit Adulteration: How to spot it and stay safe</h1>
+        <p class="muted">From artificial ripening to wax and dyes — what to look for, why it matters, and how we keep fruit honest.</p>
+      </header>
+
+      <figure class="post-hero" style="--img:url('https://placehold.co/1600x900/png?text=Fruit+Adulteration');"></figure>
+
+      <section class="post-content">
+        <h2>Common forms of adulteration</h2>
+        <ul>
+          <li><strong>Artificial ripening:</strong> Calcium carbide (banned) or excessive ethylene speeds up ripening, leading to uneven colour and poor flavour.</li>
+          <li><strong>Wax and shine:</strong> Food-grade wax can trap moisture, but overuse and non‑food waxes reduce aroma and mislead on freshness.</li>
+          <li><strong>Added colour:</strong> Dyes or surface brighteners deepen reds/greens, masking natural seasonality and variety differences.</li>
+          <li><strong>Injected sweetness:</strong> Sugar syrups or pre‑soaks alter taste and weight, undermining natural brix and mouthfeel.</li>
+        </ul>
+
+        <h2>Simple checks you can do</h2>
+        <ul>
+          <li><strong>Look:</strong> Uniform, overly bright colour with green stems can indicate forced ripening or dyes.</li>
+          <li><strong>Smell:</strong> Ripe fruit should have a gentle, varietal aroma near the stem — chemical odours are a red flag.</li>
+          <li><strong>Feel:</strong> Very soft outside but green inside, or rubbery skin with glossy finish, can indicate artificial processes.</li>
+          <li><strong>Cut:</strong> Colour bleeding into the pith, very hard seeds with soft flesh, or watery sweetness suggest interference.</li>
+        </ul>
+
+        <h2>Health and quality impacts</h2>
+        <p>Forced ripening and cosmetic treatments short‑circuit the fruit’s natural development: sugars don’t balance with acids, aroma compounds stay low, and texture suffers. In some cases, unsafe chemicals can pose health risks. Even when allowed materials are used, overuse prioritises looks over nutrition.</p>
+
+        <h2>Our approach at being honest</h2>
+        <ul>
+          <li><strong>Natural ripening only:</strong> No artificial ripening agents. We harvest at physiological maturity and wait.</li>
+          <li><strong>No added colour, shine, or wax:</strong> Skin stays as nature made it. Scuff marks are fine; gloss isn’t our goal.</li>
+          <li><strong>Small batches, short holds:</strong> Gentle handling, minimal storage time, and transparent movement from farm to you.</li>
+          <li><strong>Authentic varieties:</strong> Each variety has its own natural colour, aroma, and sweetness. We let it speak for itself.</li>
+        </ul>
+
+        <h2>What to buy instead</h2>
+        <p>Choose fruit with seasonal colour, light bloom (a matte, natural finish), and gentle aroma. Favour producers and stores that embrace transparency. If it looks too perfect, it probably isn’t honest.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="../index.html#top" class="brand brand--footer">being<span>honest</span></a>
+        <p class="muted">Fruit that respects time. © <span id="year"></span></p>
+      </div>
+      <form id="newsletter" class="newsletter" novalidate>
+        <label>Email for gentle updates</label>
+        <div class="input-wrap">
+          <input type="email" id="email" placeholder="you@example.com" required />
+          <button class="btn small" type="submit">Subscribe</button>
+        </div>
+        <p class="tiny muted">By subscribing you agree to receive occasional emails.</p>
+      </form>
+      <div class="links">
+        <a href="../index.html#stores">Stores</a>
+        <a id="contactOpen" href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="contactModal">
+    <form method="dialog" class="modal">
+      <button class="icon-btn modal-close" aria-label="Close"><i data-lucide="x"></i></button>
+      <h3>Say hello</h3>
+      <p class="muted">We’re here, slowly.</p>
+      <div class="field"><label>Name</label><input type="text" id="cName" required/></div>
+      <div class="field"><label>Email</label><input type="email" id="cEmail" required/></div>
+      <div class="field"><label>Message</label><textarea id="cMsg" rows="4" required></textarea></div>
+      <menu>
+        <button class="btn ghost" value="cancel">Cancel</button>
+        <button class="btn primary" id="sendMsg" value="default">Send</button>
+      </menu>
+    </form>
+  </dialog>
+  <div class="scrim" id="scrim"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="../script.js"></script>
+</body>
+</html>
+
