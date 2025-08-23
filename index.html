@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>being honest — from farm to you</title>
+  <meta name="description" content="being honest brings you pomegranates sourced fresh from the finest farms in India. No artificial ripening. No added colour or sweetness. No shine or wax." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="brand" aria-label="being honest">
+  <!-- put your file in /assets (or update the path) -->
+  <img src="assets/Asset 2.png"
+       alt=""
+       class="logo"
+       width="170"
+       height="28" />
+</a>
+
+    <nav class="nav-links">
+      <a href="#why">Why Slow</a>
+      <a href="#stores">Stores</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="openContact" aria-label="Contact"><i data-lucide="mail"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top" role="banner" aria-label="being honest — Slow is our superpower">
+    <div class="hero-media"
+     style="--img:url('assets/images/farmer/pexels-chiecharon-708798.jpg');">
+</div>
+
+    <div class="hero-content">
+      <p class="eyebrow">fresh from the finest farms in India</p>
+      <h1>From the farm <span>to you</span>.</h1>
+      <p class="sub">we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and our planet. we find purpose in sustaining a community centered in caring, curiosity, and positive change.</strong></p>
+      <div class="cta">
+        <a href="#why" class="btn primary">Explore why slow</a>
+        <a href="#stores" class="btn ghost">Find stores</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY SLOW (anchor) -->
+  <span id="why"></span>
+
+<!-- OUR STANDARD SECTION (clean top, added spacing) -->
+<section class="std-section">
+  <div class="std-wrap">
+    <h2 class="std-title">OUR STANDARD</h2>
+
+    <p class="std-intro">
+      AT THE HEART OF BEING HONEST, THERE’S A PROMISE WE’LL NEVER BREAK: EVERYTHING HERE IS CURATED TO
+      SUPPORT YOUR HEALTH JOURNEY. WE DO THE WORK FOR YOU, SO YOU DON’T HAVE TO WONDER WHAT YOU’RE
+      PUTTING IN YOUR BODY.
+    </p>
+
+    <div class="std-panel">
+      <div class="std-grid">
+        <ul class="std-list">
+          <li>NO ARTIFICIAL RIPENING</li>
+          <li>NO ADDED COLOUR &amp; SWEETNESS</li>
+          <li>NO SHINE &amp; WAX</li>
+          <li>SMALL BATCHES</li>
+          <li>AUTHENTIC VARIETIES</li>
+        </ul>
+
+        <ul class="std-list">
+          <li>ECO-CONSCIOUS / HANDPICKED / CURATED</li>
+          <li>LOCAL AND FAMILY-OWNED FARMS</li>
+          <li>LOW-IMPACT PACKAGING</li>
+        </ul>
+
+        <!-- Motto row -->
+        <div class="std-motto">
+          <div class="std-motto-label">MOTTO:</div>
+          <div class="std-motto-text">WE BELIEVE IN SLOW</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ------- THEME ------- */
+  .std-section {
+    background: #000;
+    color: #f5f5f5;
+    padding: 72px 20px;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .std-wrap { max-width: 1120px; margin: 0 auto; text-align: center; }
+
+  /* ------- HEADLINE & INTRO ------- */
+  .std-title {
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    font-weight: 700;
+  }
+  .std-intro {
+    max-width: 920px;
+    margin: 0 auto;                 /* center */
+    margin-bottom: 32px;            /* space before the panel */
+    font-size: 13px;
+    line-height: 1.9;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d9d9d9;
+  }
+
+  /* ------- PANEL (clean top, no corner lines) ------- */
+  .std-panel {
+    border: 1px solid #2a2a2a;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    padding: 40px 28px 28px;        /* extra top padding for air */
+    margin-top: 12px;               /* spacing from intro */
+  }
+
+  /* ------- GRID ------- */
+  .std-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 60px;
+    text-align: left;
+  }
+  @media (max-width: 820px) {
+    .std-grid { grid-template-columns: 1fr; }
+    .std-panel { padding: 32px 20px; }
+  }
+
+  /* ------- LISTS ------- */
+  .std-list { list-style: none; margin: 0; padding: 0; }
+  .std-list li {
+    position: relative;
+    padding-left: 20px;
+    margin: 14px 0;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.75;
+    color: #ececec;
+  }
+  .std-list li::before {
+    content: "•";
+    position: absolute; left: 0; top: 0;
+    line-height: 1.75; opacity: 0.9;
+  }
+
+  /* ------- MOTTO ROW ------- */
+  .std-motto {
+    grid-column: 1 / -1; /* span both columns */
+    border-top: 1px solid #262626;
+    margin-top: 6px;
+    padding-top: 22px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+  .std-motto-label {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #cfcfcf;
+    white-space: nowrap;
+  }
+  .std-motto-text {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e8e8e8;
+    line-height: 1.8;
+  }
+  @media (max-width: 640px) {
+    .std-motto { grid-template-columns: 1fr; }
+    .std-motto-label { margin-bottom: 6px; }
+  }
+</style>
+
+
+
+  <!-- PINNED STORY like Apple panels -->
+  <section class="panels" aria-label="Story">
+    <article class="panel">
+      <div class="panel-media" style="--img:url('https://placehold.co/1600x1000/png?text=Unhurried+harvest');"></div>
+      <div class="panel-copy">
+        <h2>We believe in slow.</h2>
+        <p>Time builds flavour. We harvest only when the fruit is truly ready—never hurried, always honest.</p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="panel-media" style="--img:url('https://placehold.co/1600x1000/png?text=No+artificial+ripening');"></div>
+      <div class="panel-copy">
+        <h3>No artificial ripening.</h3>
+        <p>Nothing forced. Just natural ripening under open skies.</p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="panel-media" style="--img:url('https://placehold.co/1600x1000/png?text=No+added+colour+or+sweetness');"></div>
+      <div class="panel-copy">
+        <h3>No added colour or sweetness.</h3>
+        <p>What you taste is the fruit’s own character—untinted, unmasked.</p>
+      </div>
+    </article>
+
+    <article class="panel">
+      <div class="panel-media" style="--img:url('https://placehold.co/1600x1000/png?text=No+shine+or+wax');"></div>
+      <div class="panel-copy">
+        <h3>No shine or wax.</h3>
+        <p>We keep the skin as nature made it. Beauty without the gloss.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- PRODUCT section removed: e-commerce functionality disabled -->
+
+  <!-- CALM BREAK -->
+  <section class="calm" aria-label="Calm break">
+    <div class="calm-media" style="--img:url('https://placehold.co/2000x1200/png?text=We+believe+in+slow');"></div>
+    <div class="calm-copy">
+      <h2>We believe in slow.</h2>
+      <p>Slower decisions. Softer days. Better fruit.</p>
+    </div>
+  </section>
+
+  <!-- STORES -->
+  <section id="stores" class="stores">
+    <div class="stores-head">
+      <h2>Find us offline</h2>
+      <p>Prefer to handpick? Visit a partner store near you.</p>
+    </div>
+    <div class="store-grid">
+      <div class="store-card">
+        <h3>Hyderabad — Q Mart, Banjara Hills</h3>
+        <p>Road Number 2, Banjara Hills</p>
+        <a class="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Q%20Mart%20Banjara%20Hills">Open in Maps</a>
+      </div>
+      <div class="store-card">
+        <h3>Mumbai — Nature’s Basket, Bandra</h3>
+        <p>Linking Road, Bandra West</p>
+        <a class="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Natures%20Basket%20Bandra">Open in Maps</a>
+      </div>
+      <div class="store-card">
+        <h3>Bengaluru — Foodhall, MG Road</h3>
+        <p>1 MG-Lido Mall</p>
+        <a class="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Foodhall%20MG%20Road">Open in Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>Questions, answered</h2>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Do you grow the fruit yourselves?<i data-lucide="chevron-down"></i></button>
+      <div class="faq-a">We partner with trusted growers and source fresh from the finest farms in India. We focus on harvest timing and handling.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Any artificial ripening or additives?<i data-lucide="chevron-down"></i></button>
+      <div class="faq-a">No. No artificial ripening. No added colour or sweetness. No shine or wax.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Where do you deliver?<i data-lucide="chevron-down"></i></button>
+      <div class="faq-a">We currently ship across major Indian metros. Contact us to confirm coverage in your area.</div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="brand brand--footer">being<span>honest</span></a>
+        <p class="muted">Fruit that respects time. © <span id="year"></span></p>
+      </div>
+      <form id="newsletter" class="newsletter" novalidate>
+        <label>Email for gentle updates</label>
+        <div class="input-wrap">
+          <input type="email" id="email" placeholder="you@example.com" required />
+          <button class="btn small" type="submit">Subscribe</button>
+        </div>
+        <p class="tiny muted">By subscribing you agree to receive occasional emails.</p>
+      </form>
+      <div class="links">
+        <a href="#stores">Stores</a>
+        <a id="contactOpen" href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <dialog id="contactModal">
+    <form method="dialog" class="modal">
+      <button class="icon-btn modal-close" aria-label="Close"><i data-lucide="x"></i></button>
+      <h3>Say hello</h3>
+      <p class="muted">We’re here, slowly.</p>
+      <div class="field"><label>Name</label><input type="text" id="cName" required/></div>
+      <div class="field"><label>Email</label><input type="email" id="cEmail" required/></div>
+      <div class="field"><label>Message</label><textarea id="cMsg" rows="4" required></textarea></div>
+      <menu>
+        <button class="btn ghost" value="cancel">Cancel</button>
+        <button class="btn primary" id="sendMsg" value="default">Send</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Scrim for modal overlay -->
+  <div class="scrim" id="scrim"></div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
