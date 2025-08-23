@@ -282,5 +282,5 @@ dialog{border:none; padding:0; background:transparent}
 /* Photos section */
 .photos{padding:48px 20px; max-width:1200px; margin:0 auto}
 .photo-grid{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
-.photo{width:240px; height:240px; border-radius:50%; overflow:hidden; background-image:var(--img); background-size: var(--bg-size, cover); background-position: 50% var(--pos-y, 50%); background-repeat:no-repeat; border:1px solid var(--line)}
+.photo{width:240px; height:240px; border-radius:50%; overflow:hidden; background-image:var(--img); background-size: var(--bg-size, cover); background-position: var(--pos-x, 50%) var(--pos-y, 50%); background-repeat:no-repeat; border:1px solid var(--line)}
 @media (min-width:900px){ .photo{ width:300px; height:300px } }

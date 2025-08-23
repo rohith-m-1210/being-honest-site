@@ -162,7 +162,8 @@ export default function Home() {
             className="photo"
             style={{
               "--img": "url('/assets/images/pomegranate/pexels-roman-odintsov-5150206.jpg')",
-              "--pos-y": "30%",
+              "--pos-y": "100%",
+              "--pos-x": "80%",
               "--bg-size": "110%",
             } as React.CSSProperties}
           />
