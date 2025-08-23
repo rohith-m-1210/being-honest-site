@@ -45,11 +45,16 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero" id="top" role="banner" aria-label="being honest — Slow is our superpower">
-        <div className="hero-media" style={{
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore - CSS var string ok
-          "--img": "url('/assets/images/farmer/pexels-chiecharon-708798.jpg')",
-        }} />
+        <div
+          className="hero-media"
+          style={{
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore - CSS var string ok
+            "--img": "url('/assets/images/header /harendra-kumar-3JxfLgxg_bM-unsplash.jpg')",
+            "--pos": "50% 40%",
+            "--pos-mobile": "50% 20%",
+          } as React.CSSProperties}
+        />
 
         <div className="hero-content">
           <p className="eyebrow">fresh from the finest farms in India</p>
@@ -161,14 +166,9 @@ export default function Home() {
             <a className="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Q%20Mart%20Banjara%20Hills">Open in Maps</a>
           </div>
           <div className="store-card">
-            <h3>Mumbai — Nature’s Basket, Bandra</h3>
-            <p>Linking Road, Bandra West</p>
-            <a className="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Natures%20Basket%20Bandra">Open in Maps</a>
-          </div>
-          <div className="store-card">
-            <h3>Bengaluru — Foodhall, MG Road</h3>
-            <p>1 MG-Lido Mall</p>
-            <a className="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Foodhall%20MG%20Road">Open in Maps</a>
+            <h3>Hyderabad — Q Mart, Gachibowli</h3>
+            <p>Gachibowli, Hyderabad</p>
+            <a className="btn tiny" target="_blank" rel="noopener" href="https://maps.google.com/?q=Q%20Mart%20Gachibowli">Open in Maps</a>
           </div>
         </div>
       </section>
