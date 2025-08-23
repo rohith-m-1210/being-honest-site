@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,11 +13,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const abcNormalBold = localFont({
+  src: [
+    { path: "../public/assets/fonts/ABCNormal-Bold.woff2.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-abc-normal-bold",
   display: "swap",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const abcNormal = localFont({
+  src: [
+    { path: "../public/assets/fonts/ABCNormal-Thin.woff2.ttf", weight: "100", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Light.woff2.ttf", weight: "300", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Regular.woff2.ttf", weight: "400", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Medium.woff2.ttf", weight: "500", style: "normal" },
+    { path: "../public/assets/fonts/ABC Normal Semibold.woff2.ttf", weight: "600", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Bold.woff2.ttf", weight: "700", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Heavy.woff2.ttf", weight: "800", style: "normal" },
+    { path: "../public/assets/fonts/ABCNormal-Black.woff2.ttf", weight: "900", style: "normal" },
+  ],
+  variable: "--font-abc-normal",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${abcNormal.variable} ${abcNormalBold.variable} antialiased`}>
         {children}
       </body>
     </html>
