@@ -201,7 +201,7 @@ dialog{border:none; padding:0; background:transparent}
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0 0 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .std-intro {
   max-width: 920px;
@@ -212,6 +212,7 @@ dialog{border:none; padding:0; background:transparent}
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #d9d9d9;
+  font-weight: 600;
 }
 .std-panel {
   border: 1px solid #2a2a2a;
@@ -240,6 +241,7 @@ dialog{border:none; padding:0; background:transparent}
   text-transform: uppercase;
   line-height: 1.75;
   color: #ececec;
+  font-weight: 600;
 }
 .std-list li::before {
   content: "•";
@@ -262,6 +264,7 @@ dialog{border:none; padding:0; background:transparent}
   text-transform: uppercase;
   color: #cfcfcf;
   white-space: nowrap;
+  font-weight: 600;
 }
 .std-motto-text {
   font-size: 13px;
@@ -269,8 +272,15 @@ dialog{border:none; padding:0; background:transparent}
   text-transform: uppercase;
   color: #e8e8e8;
   line-height: 1.8;
+  font-weight: 600;
 }
 @media (max-width: 640px) {
   .std-motto { grid-template-columns: 1fr; }
   .std-motto-label { margin-bottom: 6px; }
 }
+
+/* Photos section */
+.photos{padding:48px 20px; max-width:1200px; margin:0 auto}
+.photo-grid{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
+.photo{width:240px; height:240px; border-radius:50%; overflow:hidden; background-image:var(--img); background-size: var(--bg-size, cover); background-position: 50% var(--pos-y, 50%); background-repeat:no-repeat; border:1px solid var(--line)}
+@media (min-width:900px){ .photo{ width:300px; height:300px } }

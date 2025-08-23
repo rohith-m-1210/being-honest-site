@@ -153,6 +153,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Photos */}
+      <section className="photos" aria-label="Photos">
+        <div className="photo-grid">
+          <div className="photo" style={{ "--img": "url('/assets/images/pomegranate/mockup-graphics-XiWQbLEhFyo-unsplash.jpg')" } as React.CSSProperties} />
+          <div className="photo" style={{ "--img": "url('/assets/images/pomegranate/pexels-aditya-bhatia-264152318-18142134.jpg')" } as React.CSSProperties} />
+          <div
+            className="photo"
+            style={{
+              "--img": "url('/assets/images/pomegranate/pexels-roman-odintsov-5150206.jpg')",
+              "--pos-y": "30%",
+              "--bg-size": "110%",
+            } as React.CSSProperties}
+          />
+        </div>
+      </section>
+
       {/* Stores */}
       <section id="stores" className="stores">
         <div className="stores-head">
