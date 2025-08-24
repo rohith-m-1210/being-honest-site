@@ -324,3 +324,15 @@ dialog{border:none; padding:0; background:transparent}
   .post-hero{ height:480px }
   .post-content{ font-size:18px }
 }
+
+/* Farm detail layout */
+.farm-hero{height:360px; border-radius:22px; border:1px solid var(--line); overflow:hidden; background-image:var(--img); background-size:cover; background-position:center; opacity:.95}
+.farm-header{display:grid; gap:8px; margin:14px 0 8px}
+.farm-tags{display:flex; gap:10px; flex-wrap:wrap}
+.tag{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.04); font-size:12px}
+.farm-grid{display:grid; gap:14px; margin-top:18px}
+.fact-card,.map-card{border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); padding:16px}
+.fact-list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+.map-embed{position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:1px solid var(--line); background:#000}
+.map-embed iframe{position:absolute; top:0; left:0; width:100%; height:100%; border:0}
+@media (min-width:900px){ .farm-grid{ grid-template-columns: 1.2fr .8fr } }

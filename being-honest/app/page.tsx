@@ -77,6 +77,7 @@ export default function Home() {
           <div className="cta">
             <a href="#why" className="btn primary">Explore why slow</a>
             <a href="#stores" className="btn ghost">Find stores</a>
+            <a href="/farm-code" className="btn ghost">Enter Farm Code</a>
           </div>
         </div>
       </section>
