@@ -6,6 +6,7 @@ export default function Home() {
   // UI state for FAQ and modal/toast
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
   const [showModal, setShowModal] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const emailRef = useRef<HTMLInputElement>(null);
 
@@ -30,20 +31,27 @@ export default function Home() {
         <a href="#top" className="brand" aria-label="being honest">
           <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
         </a>
-        <nav className="nav-links">
-          <a href="#why">Why Slow</a>
-          <a href="#stores">Stores</a>
-          <a href="#faq">FAQ</a>
-          <a href="/from-soil-to-soul">From Soil to Soul</a>
-          <a href="/our-purpose">Our Purpose</a>
-          <a href="/blogs">Blogs</a>
+        <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
+          <a href="#why" onClick={() => setNavOpen(false)}>Why Slow</a>
+          <a href="#stores" onClick={() => setNavOpen(false)}>Stores</a>
+          <a href="#faq" onClick={() => setNavOpen(false)}>FAQ</a>
+          <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
+          <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
+          <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
         </nav>
         <div className="nav-actions">
-          <button className="icon-btn" aria-label="Contact" onClick={() => setShowModal(true)}>
-            ✉
+          <button
+            className="icon-btn nav-toggle"
+            aria-label="Menu"
+            aria-controls="site-nav"
+            aria-expanded={navOpen ? "true" : "false"}
+            onClick={() => setNavOpen((v) => !v)}
+          >
+            ☰
           </button>
         </div>
       </header>
+      {navOpen && <div className="scrim on" onClick={() => setNavOpen(false)} />}
 
       {/* HERO */}
       <section className="hero" id="top" role="banner" aria-label="being honest — Slow is our superpower">

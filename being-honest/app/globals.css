@@ -66,6 +66,19 @@ img{max-width:100%; display:block}
   .nav-links{display:flex}
 }
 
+/* Mobile nav toggle and menu */
+.nav-toggle{ display:inline-flex; }
+@media (min-width:900px){ .nav-toggle{ display:none; } }
+.nav-links.open{
+  display:flex;
+  position:fixed; left:12px; right:12px; top:64px;
+  flex-direction:column; gap:10px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:12px; z-index:60;
+}
+.nav-links.open a{ padding:10px 12px; border-radius:10px; }
+.nav-links.open a:hover{ background:rgba(255,255,255,.06); }
+
 /* Hero */
 .hero{position:relative; min-height:75vh; display:grid; align-items:center}
 .hero::before{
