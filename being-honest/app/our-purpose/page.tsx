@@ -42,7 +42,6 @@ export default function OurPurpose() {
       <main className="post">
         <article className="post-article">
           <header className="post-header">
-            <p className="post-eyebrow">Purpose</p>
             <h1>Our Purpose</h1>
           </header>
 
@@ -116,4 +115,3 @@ export default function OurPurpose() {
     </>
   );
 }
-
