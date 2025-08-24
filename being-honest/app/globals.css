@@ -303,6 +303,19 @@ dialog{border:none; padding:0; background:transparent}
 .photo{width:240px; height:240px; border-radius:50%; overflow:hidden; background-image:var(--img); background-size: var(--bg-size, cover); background-position: var(--pos-x, 50%) var(--pos-y, 50%); background-repeat:no-repeat; border:1px solid var(--line)}
 @media (min-width:900px){ .photo{ width:300px; height:300px } }
 
+/* Reviews */
+.reviews{padding:48px 20px; max-width:1200px; margin:0 auto}
+.reviews-head h2{font-size:36px; margin:0 0 6px}
+.reviews-head p{color:var(--muted); margin:0 0 18px}
+.review-grid{display:grid; gap:14px; align-items:stretch}
+.review-card{border:1px solid var(--line); border-radius:20px; padding:16px 18px; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); display:flex; flex-direction:column}
+.review-quote{margin:0 0 12px; font-size:18px; line-height:1.7; margin-bottom:auto}
+.review-quote em{font-style:normal; text-decoration:underline dotted rgba(255,255,255,.4)}
+.review-meta{display:flex; gap:8px; align-items:baseline}
+.review-meta strong{font-weight:700}
+.review-meta .muted{font-size:13px}
+@media (min-width:900px){ .review-grid{ grid-template-columns:1fr 1fr } }
+
 /* Post (article) pages */
 .post{ padding:56px 20px; }
 .post-article{ max-width:900px; margin:0 auto; }

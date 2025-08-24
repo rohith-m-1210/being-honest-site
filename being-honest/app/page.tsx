@@ -188,6 +188,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="reviews" aria-label="Reviews">
+        <div className="reviews-head">
+          <h2>What people are saying</h2>
+          <p className="muted">Real notes from our community about carbide‑free mangoes.</p>
+        </div>
+        <div className="review-grid">
+          <figure className="review-card">
+            <blockquote className="review-quote">
+              “We could see the <em>poralu</em> (threads) as we ate. The flesh
+              turned a deep orange — the kind we used to get at home. My family
+              finished them fast.”
+            </blockquote>
+            <figcaption className="review-meta">
+              <strong>Satyasree</strong>
+              <span className="muted">Homemaker</span>
+            </figcaption>
+          </figure>
+
+          <figure className="review-card">
+            <blockquote className="review-quote">
+              “I had their Himayat mangoes — the fruits were big and really tasty.
+              My son and daughter kept asking for more.”
+            </blockquote>
+            <figcaption className="review-meta">
+              <strong>Chaitanya</strong>
+              <span className="muted">Entrepreneur</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* Stores */}
       <section id="stores" className="stores">
         <div className="stores-head">
