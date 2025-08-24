@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${abcNormal.variable} ${abcNormalBold.variable} antialiased`}>
+      <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${abcNormal.variable} ${abcNormalBold.variable} antialiased`}>
         {children}
       </body>
     </html>

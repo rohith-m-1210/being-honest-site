@@ -119,7 +119,14 @@ export default function Home() {
           </div>
         </article>
         <article className="panel">
-          <div className="panel-media" style={{ "--img": "url('https://placehold.co/1600x1000/png?text=No+artificial+ripening')" } as React.CSSProperties} />
+          <div
+            className="panel-media"
+            style={{
+              "--img": "url('/assets/images/website/fatemeh-zakeri-lkflaFuiXII-unsplash.jpg')",
+              "--pos": "50% 60%",
+              "--pos-mobile": "50% 30%",
+            } as React.CSSProperties}
+          />
           <div className="panel-copy">
             <h3>No artificial ripening.</h3>
             <p>Nothing forced. Just natural ripening under open skies.</p>
