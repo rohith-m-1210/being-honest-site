@@ -284,3 +284,27 @@ dialog{border:none; padding:0; background:transparent}
 .photo-grid{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
 .photo{width:240px; height:240px; border-radius:50%; overflow:hidden; background-image:var(--img); background-size: var(--bg-size, cover); background-position: var(--pos-x, 50%) var(--pos-y, 50%); background-repeat:no-repeat; border:1px solid var(--line)}
 @media (min-width:900px){ .photo{ width:300px; height:300px } }
+
+/* Post (article) pages */
+.post{ padding:56px 20px; }
+.post-article{ max-width:900px; margin:0 auto; }
+.post-header{ margin:4px 0 20px; }
+.post-eyebrow{ color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:600; margin:0 0 8px }
+.post-header h1{ font-size:42px; line-height:1.08; letter-spacing:-.02em; margin:0 0 8px; font-weight:700; font-family: var(--font-abc-normal), system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif }
+.post-header .muted{ margin:0; }
+
+/* Optional hero for article pages using --img */
+.post-hero{ height:420px; border-radius:20px; border:1px solid var(--line); background-image:var(--img); background-size:cover; background-position:center; opacity:.95; margin:14px 0 24px }
+
+.post-content{ font-size:17px; line-height:1.9; color:#e8e8e8; }
+.post-content h2{ font-size:26px; margin:20px 0 8px; letter-spacing:-.01em }
+.post-content p{ margin:0 0 14px; color:var(--muted); }
+.post-content ul,.post-content ol{ margin:0 0 16px 18px; color:var(--muted); }
+.post-content li{ margin:6px 0 }
+
+@media (min-width:900px){
+  .post{ padding:72px 20px; }
+  .post-header h1{ font-size:52px }
+  .post-hero{ height:480px }
+  .post-content{ font-size:18px }
+}

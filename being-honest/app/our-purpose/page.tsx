@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 
-export default function Blogs() {
+export default function OurPurpose() {
   const [showModal, setShowModal] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -39,35 +39,36 @@ export default function Blogs() {
         </div>
       </header>
 
-      <main className="blog">
-        <section className="blog-hero">
-          <h1>Notes from the orchard</h1>
-          <p className="muted">Slow fruit, honest methods, and practical tips for your table.</p>
-        </section>
+      <main className="post">
+        <article className="post-article">
+          <header className="post-header">
+            <p className="post-eyebrow">Purpose</p>
+            <h1>Our Purpose</h1>
+          </header>
 
-        <section className="post-list">
-          <article className="post-card">
-            <a className="post-link" href="/blogs/fruit-adulteration">
-              <div className="post-media" style={{ "--img": "url('https://placehold.co/1200x700/png?text=Fruit+Adulteration')" } as React.CSSProperties}></div>
-              <div className="post-copy">
-                <h2>Fruit Adulteration: How to spot it and stay safe</h2>
-                <p className="muted">From artificial ripening to wax and dyes — what to look for, the risks, and how being honest avoids it entirely.</p>
-                <p className="tiny muted">5–6 min read</p>
-              </div>
-            </a>
-          </article>
+          <section className="post-content">
+            <p>
+              To communicate the story of India and its people to the world — through fruits that carry the essence of our land, our farmers, and our traditions.
+            </p>
 
-          <article className="post-card">
-            <a className="post-link" href="/blogs/why-slow-matters">
-              <div className="post-media" style={{ "--img": "url('https://placehold.co/1200x700/png?text=Why+Slow+Matters')" } as React.CSSProperties}></div>
-              <div className="post-copy">
-                <h2>Why Slow Fruit Matters: From the farm to you</h2>
-                <p className="muted">Harvest timing, natural ripening, small batches, and gentle handling — the pillars behind better taste and better health.</p>
-                <p className="tiny muted">4–5 min read</p>
-              </div>
-            </a>
-          </article>
-        </section>
+            <h2>Our Belief</h2>
+            <p>
+              We believe in choosing the harder right over the easier wrong.
+            </p>
+
+            <h2>Our Commitment</h2>
+            <p>
+              Our commitment is to be <em>sat</em> (truth) with our clients and community — <em>sang</em> (together) in everything that we do. Because food should never deceive. It should connect, nourish, and celebrate life as it truly is.
+            </p>
+            <p>
+              At every step, we remind ourselves: integrity is our harvest, honesty is our offering, and truth is our way of life.
+            </p>
+
+            <p>
+              We believe the truth will always taste better.
+            </p>
+          </section>
+        </article>
       </main>
 
       <footer className="footer">
@@ -115,3 +116,4 @@ export default function Blogs() {
     </>
   );
 }
+

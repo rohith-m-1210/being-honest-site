@@ -35,6 +35,7 @@ export default function Home() {
           <a href="#stores">Stores</a>
           <a href="#faq">FAQ</a>
           <a href="/from-soil-to-soul">From Soil to Soul</a>
+          <a href="/our-purpose">Our Purpose</a>
           <a href="/blogs">Blogs</a>
         </nav>
         <div className="nav-actions">

@@ -2,12 +2,6 @@
 
 import { useMemo, useRef, useState } from "react";
 
-export const metadata = {
-  title: "From Soil to Soul — being honest",
-  description:
-    "A story rooted in the land: patience, seasons, and the taste of time — from farm to you.",
-};
-
 export default function FromSoilToSoul() {
   const [showModal, setShowModal] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
@@ -37,6 +31,7 @@ export default function FromSoilToSoul() {
           <a href="/#stores">Stores</a>
           <a href="/#faq">FAQ</a>
           <a href="/from-soil-to-soul">From Soil to Soul</a>
+          <a href="/our-purpose">Our Purpose</a>
           <a href="/blogs">Blogs</a>
         </nav>
         <div className="nav-actions">
