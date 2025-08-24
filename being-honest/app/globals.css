@@ -159,6 +159,8 @@ img{max-width:100%; display:block}
 .footer{border-top:1px solid var(--line); padding:28px 20px}
 .footer-grid{max-width:1200px; margin:0 auto; display:grid; gap:16px}
 .brand--footer span{color:var(--accent)}
+.footer .brand .logo{ height:28px; width:auto; display:block; }
+@media (max-width:520px){ .footer .brand .logo{ height:22px; } }
 .newsletter label{display:block; font-weight:600; margin-bottom:6px}
 .input-wrap{display:flex; gap:8px}
 .input-wrap input{flex:1; padding:12px 14px; border:1px solid var(--line); background:transparent; color:#fff; border-radius:12px}

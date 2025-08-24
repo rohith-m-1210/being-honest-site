@@ -91,7 +91,9 @@ export default function FromSoilToSoul() {
       <footer className="footer">
         <div className="footer-grid">
           <div>
-            <a href="/#top" className="brand brand--footer">being<span>honest</span></a>
+            <a href="/#top" className="brand brand--footer" aria-label="being honest">
+              <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
+            </a>
             <p className="muted">Fruit that respects time. © {year}</p>
           </div>
           <form className="newsletter" onSubmit={onNewsletter}>
