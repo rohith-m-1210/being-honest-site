@@ -68,10 +68,10 @@ export default function Home() {
 
         <div className="hero-content">
           <h1>
-            Fresh from India’s finest farms <span>to you.</span>
+            <span className="h1-soft">Fresh from</span> India’s finest farms <span>to you.</span>
           </h1>
           <p className="sub">
-            we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and our planet. we find purpose in sustaining a community centered in caring, curiosity, and positive change.
+            we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and our planet.
           </p>
           <div className="cta">
             <a href="#why" className="btn primary">Explore why slow</a>
@@ -108,6 +108,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          <p className="std-note">we find purpose in sustaining a community centered in caring, curiosity, and positive change.</p>
         </div>
       </section>
 
@@ -183,6 +184,7 @@ export default function Home() {
               "--bg-size": "110%",
             } as React.CSSProperties}
           />
+
         </div>
       </section>
 
