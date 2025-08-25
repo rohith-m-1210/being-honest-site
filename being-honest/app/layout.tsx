@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const abcNormalBold = localFont({
   src: [
-    { path: "../public/assets/fonts/ABCNormal-Bold.woff2.ttf", weight: "700", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Bold.ttf", weight: "700", style: "normal" },
   ],
   variable: "--font-abc-normal-bold",
   display: "swap",
@@ -23,18 +23,21 @@ const abcNormalBold = localFont({
 
 const abcNormal = localFont({
   src: [
-    { path: "../public/assets/fonts/ABCNormal-Thin.woff2.ttf", weight: "100", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Light.woff2.ttf", weight: "300", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Regular.woff2.ttf", weight: "400", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Medium.woff2.ttf", weight: "500", style: "normal" },
-    { path: "../public/assets/fonts/ABC Normal Semibold.woff2.ttf", weight: "600", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Bold.woff2.ttf", weight: "700", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Heavy.woff2.ttf", weight: "800", style: "normal" },
-    { path: "../public/assets/fonts/ABCNormal-Black.woff2.ttf", weight: "900", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Thin.ttf", weight: "100", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-ExtraLight.ttf", weight: "200", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Light.ttf", weight: "300", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-ExtraBold.ttf", weight: "800", style: "normal" },
+    { path: "../public/assets/fonts/Nohemi-Black.ttf", weight: "900", style: "normal" },
   ],
   variable: "--font-abc-normal",
   display: "swap",
 });
+
+// No separate hero font needed; all weights map to Nohemi above
 
 export const metadata: Metadata = {
   title: "being honest — from farm to you",

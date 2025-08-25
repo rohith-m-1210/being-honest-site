@@ -67,9 +67,8 @@ export default function Home() {
         />
 
         <div className="hero-content">
-          <p className="eyebrow">fresh from the finest farms in India</p>
           <h1>
-            From the farm <span>to you</span>.
+            Fresh from India’s finest farms <span>to you.</span>
           </h1>
           <p className="sub">
             we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and our planet. we find purpose in sustaining a community centered in caring, curiosity, and positive change.
@@ -92,22 +91,21 @@ export default function Home() {
           </p>
           <div className="std-panel">
             <div className="std-grid">
+              {/* Left column: only the NO's (with NO PRESERVATIVES as 3rd) */}
               <ul className="std-list">
                 <li>NO ARTIFICIAL RIPENING</li>
                 <li>NO ADDED COLOUR &amp; SWEETNESS</li>
+                <li>NO PRESERVATIVES</li>
                 <li>NO SHINE &amp; WAX</li>
+              </ul>
+              {/* Right column: reorder with LOCAL first, HANDPICKED last */}
+              <ul className="std-list">
+                <li>LOCAL AND FAMILY-OWNED FARMS</li>
                 <li>SMALL BATCHES</li>
                 <li>AUTHENTIC VARIETIES</li>
-              </ul>
-              <ul className="std-list">
-                <li>ECO-CONSCIOUS / HANDPICKED / CURATED</li>
-                <li>LOCAL AND FAMILY-OWNED FARMS</li>
                 <li>LOW-IMPACT PACKAGING</li>
+                <li>HANDPICKED</li>
               </ul>
-              <div className="std-motto">
-                <div className="std-motto-label">MOTTO:</div>
-                <div className="std-motto-text">WE BELIEVE IN SLOW</div>
-              </div>
             </div>
           </div>
         </div>
