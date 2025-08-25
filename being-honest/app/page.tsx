@@ -141,14 +141,28 @@ export default function Home() {
           </div>
         </article>
         <article className="panel">
-          <div className="panel-media" style={{ "--img": "url('https://placehold.co/1600x1000/png?text=No+added+colour+or+sweetness')" } as React.CSSProperties} />
+          <div
+            className="panel-media"
+            style={{
+              "--img": "url('/assets/images/website/pexels-shraddha-kulkarni-451518905-15589107.jpg')",
+              "--pos": "50% 55%",
+              "--pos-mobile": "50% 45%",
+            } as React.CSSProperties}
+          />
           <div className="panel-copy">
             <h3>No added colour or sweetness.</h3>
             <p>What you taste is the fruit’s own character—untinted, unmasked.</p>
           </div>
         </article>
         <article className="panel">
-          <div className="panel-media" style={{ "--img": "url('https://placehold.co/1600x1000/png?text=No+shine+or+wax')" } as React.CSSProperties} />
+          <div
+            className="panel-media"
+            style={{
+              "--img": "url('/assets/images/website/pexels-melbinjacob-19393552.jpg')",
+              "--pos": "50% 55%",
+              "--pos-mobile": "50% 45%",
+            } as React.CSSProperties}
+          />
           <div className="panel-copy">
             <h3>No shine or wax.</h3>
             <p>We keep the skin as nature made it. Beauty without the gloss.</p>
