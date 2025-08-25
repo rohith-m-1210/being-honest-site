@@ -43,6 +43,11 @@ export const metadata: Metadata = {
   title: "being honest — from farm to you",
   description:
     "being honest brings you pomegranates sourced fresh from the finest farms in India. No artificial ripening. No added colour or sweetness. No shine or wax.",
+  icons: {
+    icon: "/assets/Asset 2.png",
+    shortcut: "/assets/Asset 2.png",
+    apple: "/assets/Asset 2.png",
+  },
 };
 
 export default function RootLayout({
