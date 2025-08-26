@@ -54,7 +54,6 @@ export default function FromSoilToSoul() {
       <main className="post">
         <article className="post-article">
           <header className="post-header">
-            <p className="post-eyebrow">Story</p>
             <h1>From Soil to Soul</h1>
           </header>
 
