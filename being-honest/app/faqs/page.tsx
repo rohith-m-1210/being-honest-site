@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
-type QA = { q: string; a: JSX.Element };
+type QA = { q: string; a: ReactNode };
 type Section = { id: string; title: string; items: QA[] };
 
 export default function FAQsPage() {
