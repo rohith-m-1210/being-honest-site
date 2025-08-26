@@ -158,6 +158,11 @@ img{max-width:100%; display:block}
 .faq-q{width:100%; text-align:left; background:transparent; border:none; color:#fff; font-weight:600; padding:16px 0; display:flex; align-items:center; justify-content:space-between; cursor:pointer}
 .faq-a{display:none; color:var(--muted); padding:0 0 16px}
 .faq-item.open .faq-a{display:block}
+/* Add spacing before paragraphs inside FAQ answers */
+.faq-a p{ margin:10px 0 12px }
+.faq-a p:first-child{ margin-top:10px }
+
+/* FAQs page: use existing .faq styles (no overrides) */
 
 /* Footer */
 .footer{border-top:1px solid var(--line); padding:28px 20px}

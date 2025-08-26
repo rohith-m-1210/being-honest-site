@@ -30,7 +30,7 @@ export default function Blogs() {
         <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
           <a href="/#why" onClick={() => setNavOpen(false)}>Why Slow</a>
           <a href="/#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="/#faq" onClick={() => setNavOpen(false)}>FAQ</a>
+          <a href="/faqs" onClick={() => setNavOpen(false)}>faqs</a>
           <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
           <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
           <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
@@ -72,7 +72,7 @@ export default function Blogs() {
               <div className="post-media" style={{ "--img": "url('https://placehold.co/1200x700/png?text=Why+Slow+Matters')" } as React.CSSProperties}></div>
               <div className="post-copy">
                 <h2>Why Slow Fruit Matters: From the farm to you</h2>
-                <p className="muted">Harvest timing, natural ripening, small batches, and gentle handling — the pillars behind better taste and better health.</p>
+                <p className="muted">Harvest timing, natural ripening, short holds, and gentle handling — the pillars behind better taste and better health.</p>
                 <p className="tiny muted">4–5 min read</p>
               </div>
             </a>

@@ -27,7 +27,7 @@ export default function WhySlowMatters() {
         <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
           <a href="/#why" onClick={() => setNavOpen(false)}>Why Slow</a>
           <a href="/#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="/#faq" onClick={() => setNavOpen(false)}>FAQ</a>
+          <a href="/faqs" onClick={() => setNavOpen(false)}>faqs</a>
           <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
           <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
           <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
@@ -51,7 +51,7 @@ export default function WhySlowMatters() {
           <header className="post-header">
             <p className="post-eyebrow">Notes</p>
             <h1>Why Slow Fruit Matters: From the farm to you</h1>
-            <p className="muted">Harvest timing, natural ripening, small batches, and gentle handling — the pillars behind better taste and better health.</p>
+            <p className="muted">Harvest timing, natural ripening, short holds, and gentle handling — the pillars behind better taste and better health.</p>
           </header>
           <figure className="post-hero" style={{ "--img": "url('https://placehold.co/1600x900/png?text=Why+Slow+Matters')" } as React.CSSProperties}></figure>
           <section className="post-content">
@@ -59,8 +59,8 @@ export default function WhySlowMatters() {
             <p>We harvest at physiological maturity — not early for shipping convenience, and not late for superficial sweetness. That balanced timing builds real flavour.</p>
             <h2>Natural ripening</h2>
             <p>No artificial ripening, ever. We let the fruit finish on its own terms, which preserves aroma compounds and texture.</p>
-            <h2>Small batches</h2>
-            <p>Less stacking, less bruising. We move fruit in smaller lots with shorter holds so it arrives more honest.</p>
+            <h2>Short holds</h2>
+            <p>Less stacking, less bruising. We keep storage times short so fruit moves quickly and arrives more honest.</p>
             <h2>Gentle handling</h2>
             <p>Fewer rough edges from field to shelf means more intact cell walls — and a better bite.</p>
             <h2>What this means for you</h2>

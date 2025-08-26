@@ -5,12 +5,8 @@ import dynamic from "next/dynamic";
 const ExploreRail = dynamic(() => import("./components/ExploreRail"), { ssr: false });
 
 export default function Home() {
-  // UI state for FAQ and modal/toast
+  // UI state for FAQ
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
-  const [navOpen, setNavOpen] = useState(false);
-  const [toast, setToast] = useState<string | null>(null);
-
-  const year = useMemo(() => new Date().getFullYear(), []);
 
   // Exploring the farms — only these JPEGs (as requested)
   const farmImages = useMemo(
@@ -24,39 +20,11 @@ export default function Home() {
     []
   );
 
-
-  const triggerToast = (msg: string) => {
-    setToast(msg);
-    setTimeout(() => setToast(null), 2200);
-  };
+  // no toast on home (centralized header/footer)
 
   return (
     <>
-      <header className="nav">
-        <a href="#top" className="brand" aria-label="being honest">
-          <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
-        </a>
-        <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
-          <a href="#why" onClick={() => setNavOpen(false)}>Why Slow</a>
-          <a href="#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="#faq" onClick={() => setNavOpen(false)}>FAQ</a>
-          <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
-          <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
-          <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
-        </nav>
-        <div className="nav-actions">
-          <button
-            className="icon-btn nav-toggle"
-            aria-label="Menu"
-            aria-controls="site-nav"
-            aria-expanded={navOpen ? "true" : "false"}
-            onClick={() => setNavOpen((v) => !v)}
-          >
-            ☰
-          </button>
-        </div>
-      </header>
-      {navOpen && <div className="scrim on" onClick={() => setNavOpen(false)} />}
+      
 
       {/* HERO */}
       <section className="hero" id="top" role="banner" aria-label="being honest — Slow is our superpower">
@@ -106,7 +74,6 @@ export default function Home() {
               {/* Right column: reorder with LOCAL first, HANDPICKED last */}
               <ul className="std-list">
                 <li>LOCAL AND FAMILY-OWNED FARMS</li>
-                <li>SMALL BATCHES</li>
                 <li>AUTHENTIC VARIETIES</li>
                 <li>LOW-IMPACT PACKAGING</li>
                 <li>HANDPICKED</li>
@@ -263,35 +230,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ (compact) */}
       <section id="faq" className="faq">
-        <h2>Questions, answered</h2>
-        {[
-          {
-            q: "Do you grow the fruit yourselves?",
-            a: "We partner with trusted growers and source fresh from the finest farms in India. We focus on harvest timing and handling.",
-          },
-          {
-            q: "Any artificial ripening or additives?",
-            a: "No. No artificial ripening. No added colour or sweetness. No shine or wax.",
-          },
-          {
-            q: "Where do you deliver?",
-            a: "We currently ship across major Indian metros. Contact us to confirm coverage in your area.",
-          },
-        ].map((item, idx) => (
-          <div className={`faq-item ${faqOpen[idx] ? "open" : ""}`} key={idx}>
-            <button
-              className="faq-q"
-              aria-expanded={faqOpen[idx] ? "true" : "false"}
-              onClick={() => setFaqOpen((s) => ({ ...s, [idx]: !s[idx] }))}
-            >
-              {item.q}
-              <span aria-hidden>▾</span>
-            </button>
-            <div className="faq-a">{item.a}</div>
+        <h2>FAQs</h2>
+        <div className={`faq-item ${faqOpen[0] ? "open" : ""}`}>
+          <button
+            className="faq-q"
+            aria-expanded={faqOpen[0] ? "true" : "false"}
+            onClick={() => setFaqOpen((s) => ({ ...s, 0: !s[0] }))}
+          >
+            What does “Being Honest” really mean?
+            <span aria-hidden>▾</span>
+          </button>
+          <div className="faq-a">
+            <p>It is more than a brand name - it’s our way of life. In a world where fruits are often polished, injected, and hurried for profit, we choose patience, purity, and truth. Being Honest means giving you fruit that tastes the way it should - ripe with flavour, untouched by shortcuts, and full of the memories nature intended.</p>
           </div>
-        ))}
+        </div>
+        <div style={{ marginTop: 12 }}>
+          <a className="btn ghost" href="/faqs">See all FAQs</a>
+        </div>
       </section>
 
       {/* Footer */}

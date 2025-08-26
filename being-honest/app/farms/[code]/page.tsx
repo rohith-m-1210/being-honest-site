@@ -32,7 +32,7 @@ export default function FarmDetail() {
         <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
           <a href="/#why" onClick={() => setNavOpen(false)}>Why Slow</a>
           <a href="/#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="/#faq" onClick={() => setNavOpen(false)}>FAQ</a>
+          <a href="/faqs" onClick={() => setNavOpen(false)}>faqs</a>
           <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
           <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
           <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
@@ -93,7 +93,7 @@ export default function FarmDetail() {
                     <ul className="fact-list">
                       <li>Pomegranate (Bhagwa) across 50 acres.</li>
                       <li>Natural ripening — no artificial agents.</li>
-                      <li>Small batches and gentle handling.</li>
+                      <li>Short holds and gentle handling.</li>
                     </ul>
                     <h3>About the city</h3>
                     <ul className="fact-list">

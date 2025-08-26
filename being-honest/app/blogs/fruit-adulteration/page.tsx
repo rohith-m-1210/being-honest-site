@@ -27,7 +27,7 @@ export default function FruitAdulteration() {
         <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
           <a href="/#why" onClick={() => setNavOpen(false)}>Why Slow</a>
           <a href="/#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="/#faq" onClick={() => setNavOpen(false)}>FAQ</a>
+          <a href="/faqs" onClick={() => setNavOpen(false)}>faqs</a>
           <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
           <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
           <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
@@ -75,7 +75,7 @@ export default function FruitAdulteration() {
             <ul>
               <li><strong>Natural ripening only:</strong> No artificial ripening agents. We harvest at physiological maturity and wait.</li>
               <li><strong>No added colour, shine, or wax:</strong> Skin stays as nature made it. Scuff marks are fine; gloss isn’t our goal.</li>
-              <li><strong>Small batches, short holds:</strong> Gentle handling, minimal storage time, and transparent movement from farm to you.</li>
+              <li><strong>Short holds and gentle handling:</strong> Minimal storage time, careful handling, and transparent movement from farm to you.</li>
               <li><strong>Authentic varieties:</strong> Each variety has its own natural colour, aroma, and sweetness. We let it speak for itself.</li>
             </ul>
             <h2>What to buy instead</h2>
