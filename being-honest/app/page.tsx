@@ -2,23 +2,14 @@
 
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
+import { farmImages } from "./components/exploreData";
 const ExploreRail = dynamic(() => import("./components/ExploreRail"), { ssr: false });
 
 export default function Home() {
   // UI state for FAQ
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
 
-  // Exploring the farms — only these JPEGs (as requested)
-  const farmImages = useMemo(
-    () => [
-      "/assets/images/basha/jpeg images/IMG_8708.jpg",
-      "/assets/images/basha/jpeg images/IMG_8710.jpg",
-      "/assets/images/basha/jpeg images/IMG_8728.jpg",
-      "/assets/images/basha/jpeg images/IMG_8769.jpg",
-      "/assets/images/basha/jpeg images/IMG_8776.jpg",
-    ],
-    []
-  );
+  // Images pulled from shared data so changes reflect everywhere
 
   // no toast on home (centralized header/footer)
 

@@ -82,10 +82,12 @@ export default function ExploreRail({ images, title = 'Explore the farms' }: Pro
   };
 
   return (
-    <section className="explore" aria-label={title}>
-      <div className="explore-head">
-        <h2>{title}</h2>
-      </div>
+    <section className="explore" aria-label={title || 'Explore the farms'}>
+      {title?.trim() ? (
+        <div className="explore-head">
+          <h2>{title}</h2>
+        </div>
+      ) : null}
       <div className="explore-viewport">
         <div className="explore-rail" ref={exploreRef}>
           {tripled.map((src, i) => {
@@ -118,4 +120,3 @@ export default function ExploreRail({ images, title = 'Explore the farms' }: Pro
     </section>
   );
 }
-

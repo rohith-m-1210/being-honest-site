@@ -1,6 +1,9 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+import { farmImages } from "../components/exploreData";
+const ExploreRail = dynamic(() => import("../components/ExploreRail"), { ssr: false });
 import { useRouter } from "next/navigation";
 
 export default function FarmCodeFinder() {
@@ -95,6 +98,9 @@ export default function FarmCodeFinder() {
             </form>
           </section>
         </article>
+        
+        {/* Full-width explore rail matching homepage */}
+        <ExploreRail images={farmImages} title="" />
       </main>
 
       {/*
