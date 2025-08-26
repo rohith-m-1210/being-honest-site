@@ -71,36 +71,7 @@ export default function WhySlowMatters() {
         </article>
       </main>
 
-      {/*
-      <footer className="footer">
-        <div className="footer-grid">
-          <div>
-            <a href="/#top" className="brand brand--footer" aria-label="being honest">
-              <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
-            </a>
-            <p className="muted">Fruit that respects time. © {year}</p>
-          </div>
-          <form className="newsletter" onSubmit={onNewsletter}>
-            <label>Email for gentle updates</label>
-            <div className="input-wrap">
-              <input ref={emailRef} type="email" placeholder="you@example.com" required />
-              <button className="btn small" type="submit">Subscribe</button>
-            </div>
-            <p className="tiny muted">By subscribing you agree to receive occasional emails.</p>
-          </form>
-          <div className="links">
-            <a href="/#stores">Stores</a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true); }}>Contact</a>
-          </div>
-        </div>
-      </footer>
-
-      {showModal && (
-        <>
-          {/* contact modal removed (centralized) */}
-        </>
-      )}
-      */}
+      {/* footer and contact modal removed (centralized) */}
     </>
   );
 }
