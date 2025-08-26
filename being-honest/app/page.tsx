@@ -277,9 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       {/*
-      <footer className="footer" id="contact">
         <div className="footer-grid">
           <div>
             <a href="#top" className="brand brand--footer" aria-label="being honest">
@@ -313,7 +311,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
       */}
 
       {/* TOAST removed (centralized) */}

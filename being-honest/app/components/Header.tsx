@@ -32,7 +32,7 @@ export default function Header() {
     const ids = ["why", "stores", "faq"];
     const els = ids
       .map((id) => ({ id, el: document.getElementById(id) }))
-      .filter((x): x is { id: string; el: Element } => !!x.el);
+      .filter((x): x is { id: string; el: HTMLElement } => x.el !== null) as { id: string; el: HTMLElement }[];
     if (!els.length) return;
 
     const io = new IntersectionObserver(
