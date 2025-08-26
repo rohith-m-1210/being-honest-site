@@ -252,6 +252,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
+      {/*
       <footer className="footer" id="contact">
         <div className="footer-grid">
           <div>
@@ -287,9 +288,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      */}
 
-      {/* TOAST */}
-      <div className={`toast ${toast ? "on" : ""}`} role="status" aria-live="polite">{toast}</div>
+      {/* TOAST removed (centralized) */}
     </>
   );
 }

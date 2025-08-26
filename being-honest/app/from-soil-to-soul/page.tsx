@@ -23,6 +23,7 @@ export default function FromSoilToSoul() {
 
   return (
     <>
+      {/*
       <header className="nav">
         <a href="/#top" className="brand" aria-label="being honest">
           <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
@@ -48,6 +49,7 @@ export default function FromSoilToSoul() {
         </div>
       </header>
       {navOpen && <div className="scrim on" onClick={() => setNavOpen(false)} />}
+      */}
 
       <main className="post">
         <article className="post-article">
@@ -88,6 +90,7 @@ export default function FromSoilToSoul() {
         </article>
       </main>
 
+      {/*
       <footer className="footer">
         <div className="footer-grid">
           <div>
@@ -113,25 +116,10 @@ export default function FromSoilToSoul() {
 
       {showModal && (
         <>
-          <div className="scrim on" onClick={() => setShowModal(false)} />
-          <dialog open id="contactModal">
-            <form method="dialog" className="modal" onSubmit={(e) => e.preventDefault()}>
-              <button className="icon-btn modal-close" aria-label="Close" onClick={() => setShowModal(false)}>✕</button>
-              <h3>Say hello</h3>
-              <p className="muted">We’re here, slowly.</p>
-              <div className="field"><label>Name</label><input type="text" required/></div>
-              <div className="field"><label>Email</label><input type="email" required/></div>
-              <div className="field"><label>Message</label><textarea rows={4} required></textarea></div>
-              <menu>
-                <button className="btn ghost" onClick={() => setShowModal(false)}>Cancel</button>
-                <button className="btn primary" onClick={() => { setShowModal(false); triggerToast("Message sent"); }}>Send</button>
-              </menu>
-            </form>
-          </dialog>
+          {/* contact modal removed (centralized) */}
         </>
       )}
-
-      <div className={`toast ${toast ? "on" : ""}`} role="status" aria-live="polite">{toast}</div>
+      */}
     </>
   );
 }

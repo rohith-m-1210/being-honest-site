@@ -23,31 +23,7 @@ export default function Blogs() {
 
   return (
     <>
-      <header className="nav">
-        <a href="/#top" className="brand" aria-label="being honest">
-          <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
-        </a>
-        <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
-          <a href="/#why" onClick={() => setNavOpen(false)}>Why Slow</a>
-          <a href="/#stores" onClick={() => setNavOpen(false)}>Stores</a>
-          <a href="/faqs" onClick={() => setNavOpen(false)}>faqs</a>
-          <a href="/from-soil-to-soul" onClick={() => setNavOpen(false)}>From Soil to Soul</a>
-          <a href="/our-purpose" onClick={() => setNavOpen(false)}>Our Purpose</a>
-          <a href="/blogs" onClick={() => setNavOpen(false)}>Blogs</a>
-        </nav>
-        <div className="nav-actions">
-          <button
-            className="icon-btn nav-toggle"
-            aria-label="Menu"
-            aria-controls="site-nav"
-            aria-expanded={navOpen ? "true" : "false"}
-            onClick={() => setNavOpen((v) => !v)}
-          >
-            ☰
-          </button>
-        </div>
-      </header>
-      {navOpen && <div className="scrim on" onClick={() => setNavOpen(false)} />}
+      
 
       <main className="blog">
         <section className="blog-hero">
@@ -80,50 +56,7 @@ export default function Blogs() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-grid">
-          <div>
-            <a href="/#top" className="brand brand--footer" aria-label="being honest">
-              <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
-            </a>
-            <p className="muted">Fruit that respects time. © {year}</p>
-          </div>
-          <form className="newsletter" onSubmit={onNewsletter}>
-            <label>Email for gentle updates</label>
-            <div className="input-wrap">
-              <input ref={emailRef} type="email" placeholder="you@example.com" required />
-              <button className="btn small" type="submit">Subscribe</button>
-            </div>
-            <p className="tiny muted">By subscribing you agree to receive occasional emails.</p>
-          </form>
-          <div className="links">
-            <a href="/#stores">Stores</a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true); }}>Contact</a>
-          </div>
-        </div>
-      </footer>
-
-      {showModal && (
-        <>
-          <div className="scrim on" onClick={() => setShowModal(false)} />
-          <dialog open id="contactModal">
-            <form method="dialog" className="modal" onSubmit={(e) => e.preventDefault()}>
-              <button className="icon-btn modal-close" aria-label="Close" onClick={() => setShowModal(false)}>✕</button>
-              <h3>Say hello</h3>
-              <p className="muted">We’re here, slowly.</p>
-              <div className="field"><label>Name</label><input type="text" required/></div>
-              <div className="field"><label>Email</label><input type="email" required/></div>
-              <div className="field"><label>Message</label><textarea rows={4} required></textarea></div>
-              <menu>
-                <button className="btn ghost" onClick={() => setShowModal(false)}>Cancel</button>
-                <button className="btn primary" onClick={() => { setShowModal(false); triggerToast("Message sent"); }}>Send</button>
-              </menu>
-            </form>
-          </dialog>
-        </>
-      )}
-
-      <div className={`toast ${toast ? "on" : ""}`} role="status" aria-live="polite">{toast}</div>
+      
     </>
   );
 }

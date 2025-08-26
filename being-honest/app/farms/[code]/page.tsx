@@ -25,6 +25,7 @@ export default function FarmDetail() {
 
   return (
     <>
+      {/*
       <header className="nav">
         <a href="/#top" className="brand" aria-label="being honest">
           <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
@@ -50,6 +51,7 @@ export default function FarmDetail() {
         </div>
       </header>
       {navOpen && <div className="scrim on" onClick={() => setNavOpen(false)} />}
+      */}
 
       <main className="post">
         <article className="post-article">
@@ -127,6 +129,7 @@ export default function FarmDetail() {
         </article>
       </main>
 
+      {/*
       <footer className="footer">
         <div className="footer-grid">
           <div>
@@ -142,7 +145,7 @@ export default function FarmDetail() {
         </div>
       </footer>
 
-      <div className={`toast ${toast ? "on" : ""}`} role="status" aria-live="polite">{toast}</div>
+      */}
     </>
   );
 }
