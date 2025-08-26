@@ -1,16 +1,14 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 const ExploreRail = dynamic(() => import("./components/ExploreRail"), { ssr: false });
 
 export default function Home() {
   // UI state for FAQ and modal/toast
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
-  const [showModal, setShowModal] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
 
   const year = useMemo(() => new Date().getFullYear(), []);
 
@@ -26,14 +24,6 @@ export default function Home() {
     []
   );
 
-
-  const onNewsletter = (e: React.FormEvent) => {
-    e.preventDefault();
-    const email = emailRef.current?.value?.trim() ?? "";
-    if (!/.+@.+\..+/.test(email)) return triggerToast("Please enter a valid email");
-    if (emailRef.current) emailRef.current.value = "";
-    triggerToast("Subscribed — thank you!");
-  };
 
   const triggerToast = (msg: string) => {
     setToast(msg);
@@ -313,41 +303,33 @@ export default function Home() {
             </a>
             <p className="tiny muted">FSSAI License No: 1362502600038 © 2025</p>
           </div>
-          <form className="newsletter" onSubmit={onNewsletter}>
-            <label>Email for gentle updates</label>
-            <div className="input-wrap">
-              <input ref={emailRef} type="email" placeholder="you@example.com" required suppressHydrationWarning />
-              <button className="btn small" type="submit">Subscribe</button>
-            </div>
-            <p className="tiny muted">By subscribing you agree to receive occasional emails.</p>
-          </form>
+          <div className="footer-spacer" aria-hidden></div>
+          
           <div className="links">
             <a href="#stores">Stores</a>
-            <a href="#" onClick={(e) => { e.preventDefault(); setShowModal(true); }}>Contact</a>
+            <div className="contact-block" aria-label="Contact">
+              <div className="contact-title">Contact</div>
+              <div className="contact-row">
+                <a className="phone" href="tel:+919966399588" aria-label="Call +91 99663 99588">+91 99663 99588</a>
+                <div className="contact-icons">
+                  {/* WhatsApp icon (white) */}
+                  <a className="icon" title="WhatsApp" aria-label="Open WhatsApp chat" href="https://wa.me/919966399588" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>
+                      <path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.5 0 .24 5.26.24 11.78c0 2.07.54 4.05 1.57 5.81L0 24l6.58-1.73a11.8 11.8 0 0 0 5.48 1.4h.01c6.56 0 11.82-5.26 11.82-11.78 0-3.15-1.23-6.11-3.37-8.41ZM12.06 21.3h-.01a9.5 9.5 0 0 1-4.85-1.33l-.35-.2-3.9 1.02 1.04-3.8-.23-.38a9.51 9.51 0 0 1-1.47-5.12c0-5.24 4.28-9.5 9.55-9.5a9.4 9.4 0 0 1 6.75 2.8 9.4 9.4 0 0 1 2.8 6.7c0 5.24-4.28 9.51-9.53 9.51Zm5.48-7.14c-.3-.15-1.78-.88-2.06-.98-.28-.1-.49-.15-.7.15-.21.3-.8.98-.98 1.18-.18.2-.36.22-.66.07-.3-.15-1.23-.45-2.35-1.43-.86-.74-1.44-1.66-1.62-1.96-.18-.3-.02-.45.13-.6.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.7-1.68-.96-2.3-.25-.6-.5-.5-.7-.5l-.6-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.3 5.1 4.62.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35Z"/>
+                    </svg>
+                  </a>
+                  {/* Instagram icon (white) */}
+                  <a className="icon" title="Instagram" aria-label="Open Instagram profile" href="https://instagram.com/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>
+                      <path d="M12 2.2c3 0 3.4 0 4.6.07 1.2.06 1.9.25 2.4.42.6.23 1 .5 1.5.95.45.45.72.9.95 1.5.17.5.36 1.2.42 2.4.07 1.2.07 1.6.07 4.6s0 3.4-.07 4.6c-.06 1.2-.25 1.9-.42 2.4-.23.6-.5 1-.95 1.5-.45.45-.9.72-1.5.95-.5.17-1.2.36-2.4.42-1.2.07-1.6.07-4.6.07s-3.4 0-4.6-.07c-1.2-.06-1.9-.25-2.4-.42-.6-.23-1-.5-1.5-.95-.45-.45-.72-.9-.95-1.5-.17-.5-.36-1.2-.42-2.4C2.2 15.4 2.2 15 2.2 12s0-3.4.07-4.6c.06-1.2.25-1.9.42-2.4.23-.6.5-1 .95-1.5.45-.45.9-.72 1.5-.95.5-.17 1.2-.36 2.4-.42C8.6 2.2 9 2.2 12 2.2Zm0 1.8c-3 0-3.4 0-4.6.07-1 .05-1.6.22-1.97.36-.5.2-.85.43-1.23.8-.37.38-.6.74-.8 1.24-.14.37-.3.94-.36 1.97-.07 1.2-.07 1.5-.07 4.6s0 3.4.07 4.6c.05 1 .22 1.6.36 1.97.2.5.43.85.8 1.23.38.37.74.6 1.24.8.37.14.94.3 1.97.36 1.2.07 1.5.07 4.6.07s3.4 0 4.6-.07c1-.05 1.6-.22 1.97-.36.5-.2.85-.43 1.23-.8.37-.38.6-.74.8-1.24.14-.37.3-.94.36-1.97.07-1.2.07-1.5.07-4.6s0-3.4-.07-4.6c-.05-1-.22-1.6-.36-1.97-.2-.5-.43-.85-.8-1.23-.38-.37-.74-.6-1.24-.8-.37-.14-.94-.3-1.97-.36-1.2-.07-1.5-.07-4.6-.07Zm0 3.2a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 1.8a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm5.5-2.05a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
-
-      {/* CONTACT MODAL */}
-      {showModal && (
-        <>
-          <div className="scrim on" onClick={() => setShowModal(false)} />
-          <dialog open id="contactModal">
-            <form method="dialog" className="modal" onSubmit={(e) => e.preventDefault()}>
-              <button className="icon-btn modal-close" aria-label="Close" onClick={() => setShowModal(false)}>✕</button>
-              <h3>Say hello</h3>
-              <p className="muted">We’re here, slowly.</p>
-              <div className="field"><label>Name</label><input type="text" required/></div>
-              <div className="field"><label>Email</label><input type="email" required/></div>
-              <div className="field"><label>Message</label><textarea rows={4} required></textarea></div>
-              <menu>
-                <button className="btn ghost" onClick={() => setShowModal(false)}>Cancel</button>
-                <button className="btn primary" onClick={() => { setShowModal(false); triggerToast("Message sent"); }}>Send</button>
-              </menu>
-            </form>
-          </dialog>
-        </>
-      )}
 
       {/* TOAST */}
       <div className={`toast ${toast ? "on" : ""}`} role="status" aria-live="polite">{toast}</div>
