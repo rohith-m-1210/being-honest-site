@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+const ExploreRail = dynamic(() => import("./components/ExploreRail"), { ssr: false });
 
 export default function Home() {
   // UI state for FAQ and modal/toast
@@ -11,6 +13,19 @@ export default function Home() {
   const emailRef = useRef<HTMLInputElement>(null);
 
   const year = useMemo(() => new Date().getFullYear(), []);
+
+  // Exploring the farms — only these JPEGs (as requested)
+  const farmImages = useMemo(
+    () => [
+      "/assets/images/basha/jpeg images/IMG_8708.jpg",
+      "/assets/images/basha/jpeg images/IMG_8710.jpg",
+      "/assets/images/basha/jpeg images/IMG_8728.jpg",
+      "/assets/images/basha/jpeg images/IMG_8769.jpg",
+      "/assets/images/basha/jpeg images/IMG_8776.jpg",
+    ],
+    []
+  );
+
 
   const onNewsletter = (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,7 +93,7 @@ export default function Home() {
             <a href="#stores" className="btn ghost">Find stores</a>
             <a href="/farm-code" className="btn ghost">Enter Farm Code</a>
           </div>
-        </div>
+          </div>
       </section>
 
       {/* OUR STANDARD */}
@@ -123,7 +138,7 @@ export default function Home() {
           />
           <div className="panel-copy">
             <h2>We believe in slow.</h2>
-            <p>Time builds flavour. We harvest only when the fruit is truly ready—never hurried, always honest.</p>
+            <p>Time builds flavour. We harvest only when the fruit is truly ready—never hurried.</p>
           </div>
         </article>
         <article className="panel">
@@ -137,7 +152,7 @@ export default function Home() {
           />
           <div className="panel-copy">
             <h3>No artificial ripening.</h3>
-            <p>Nothing forced. Just natural ripening under open skies.</p>
+            <p>Nothing forced. Just natural ripening, true to its time.</p>
           </div>
         </article>
         <article className="panel">
@@ -175,12 +190,11 @@ export default function Home() {
         <div
           className="calm-media"
           style={{
-            "--img": "url('/assets/images/pomegranate/pexels-julia-volk-5272973.jpg')",
+            "--img": "url('/assets/images/Screenshot%202025-08-26%20at%204.38.58%E2%80%AFPM.png')",
           } as React.CSSProperties}
         />
         <div className="calm-copy">
           <h2>We believe in slow.</h2>
-          <p>Slower decisions. Softer days. Better fruit.</p>
         </div>
       </section>
 
@@ -201,6 +215,11 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Exploring the farms */}
+      <ExploreRail
+        images={farmImages}
+        />
 
       {/* Reviews */}
       <section className="reviews" aria-label="Reviews">
@@ -292,12 +311,12 @@ export default function Home() {
             <a href="#top" className="brand brand--footer" aria-label="being honest">
               <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
             </a>
-            <p className="muted">Fruit that respects time. © {year}</p>
+            <p className="tiny muted">FSSAI License No: 1362502600038 © 2025</p>
           </div>
           <form className="newsletter" onSubmit={onNewsletter}>
             <label>Email for gentle updates</label>
             <div className="input-wrap">
-              <input ref={emailRef} type="email" placeholder="you@example.com" required />
+              <input ref={emailRef} type="email" placeholder="you@example.com" required suppressHydrationWarning />
               <button className="btn small" type="submit">Subscribe</button>
             </div>
             <p className="tiny muted">By subscribing you agree to receive occasional emails.</p>
