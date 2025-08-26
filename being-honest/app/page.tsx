@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { farmImages } from "./components/exploreData";
 const ExploreRail = dynamic(() => import("./components/ExploreRail"), { ssr: false });
@@ -22,13 +23,20 @@ export default function Home() {
         <div
           className="hero-media"
           style={{
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore - CSS var string ok
             "--img": "url('/assets/images/header /harendra-kumar-3JxfLgxg_bM-unsplash.jpg')",
             "--pos": "50% 40%",
             "--pos-mobile": "50% 20%",
           } as React.CSSProperties}
-        />
+        >
+          <Image
+            src={"/assets/images/header /harendra-kumar-3JxfLgxg_bM-unsplash.jpg"}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover", objectPosition: "50% 40%" }}
+          />
+        </div>
 
         <div className="hero-content">
           <h1>
@@ -78,54 +86,60 @@ export default function Home() {
       {/* Panels */}
       <section className="panels" aria-label="Story">
         <article className="panel">
-          <div
-            className="panel-media"
-            style={{
-              "--img": "url('/assets/images/pomegranate/pexels-julia-volk-5272973.jpg')",
-            } as React.CSSProperties}
-          />
+          <div className="panel-media">
+            <Image
+              src="/assets/images/pomegranate/pexels-julia-volk-5272973.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 60vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
           <div className="panel-copy">
             <h2>We believe in slow.</h2>
             <p>Time builds flavour. We harvest only when the fruit is truly ready—never hurried.</p>
           </div>
         </article>
         <article className="panel">
-          <div
-            className="panel-media"
-            style={{
-              "--img": "url('/assets/images/website/fatemeh-zakeri-lkflaFuiXII-unsplash.jpg')",
-              "--pos": "50% 60%",
-              "--pos-mobile": "50% 30%",
-            } as React.CSSProperties}
-          />
+          <div className="panel-media">
+            <Image
+              src="/assets/images/website/fatemeh-zakeri-lkflaFuiXII-unsplash.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 60vw"
+              style={{ objectFit: "cover", objectPosition: "50% 60%" }}
+            />
+          </div>
           <div className="panel-copy">
             <h3>No artificial ripening.</h3>
             <p>Nothing forced. Just natural ripening, true to its time.</p>
           </div>
         </article>
         <article className="panel">
-          <div
-            className="panel-media"
-            style={{
-              "--img": "url('/assets/images/website/pexels-shraddha-kulkarni-451518905-15589107.jpg')",
-              "--pos": "50% 55%",
-              "--pos-mobile": "50% 45%",
-            } as React.CSSProperties}
-          />
+          <div className="panel-media">
+            <Image
+              src="/assets/images/website/pexels-shraddha-kulkarni-451518905-15589107.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 60vw"
+              style={{ objectFit: "cover", objectPosition: "50% 55%" }}
+            />
+          </div>
           <div className="panel-copy">
             <h3>No added colour or sweetness.</h3>
             <p>What you taste is the fruit’s own character—untinted, unmasked.</p>
           </div>
         </article>
         <article className="panel">
-          <div
-            className="panel-media"
-            style={{
-              "--img": "url('/assets/images/website/pexels-melbinjacob-19393552.jpg')",
-              "--pos": "50% 55%",
-              "--pos-mobile": "50% 45%",
-            } as React.CSSProperties}
-          />
+          <div className="panel-media">
+            <Image
+              src="/assets/images/website/pexels-melbinjacob-19393552.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 60vw"
+              style={{ objectFit: "cover", objectPosition: "50% 55%" }}
+            />
+          </div>
           <div className="panel-copy">
             <h3>No shine or wax.</h3>
             <p>We keep the skin as nature made it. Beauty without the gloss.</p>
@@ -135,12 +149,15 @@ export default function Home() {
 
       {/* Calm */}
       <section className="calm" aria-label="Calm break">
-        <div
-          className="calm-media"
-          style={{
-            "--img": "url('/assets/images/Screenshot%202025-08-26%20at%204.38.58%E2%80%AFPM.png')",
-          } as React.CSSProperties}
-        />
+        <div className="calm-media">
+          <Image
+            src="/assets/images/Screenshot%202025-08-26%20at%204.38.58%E2%80%AFPM.png"
+            alt=""
+            fill
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
         <div className="calm-copy">
           <h2>We believe in slow.</h2>
         </div>
@@ -149,18 +166,36 @@ export default function Home() {
       {/* Photos */}
       <section className="photos" aria-label="Photos">
         <div className="photo-grid">
-          <div className="photo" style={{ "--img": "url('/assets/images/pomegranate/mockup-graphics-XiWQbLEhFyo-unsplash.jpg')" } as React.CSSProperties} />
-          <div className="photo" style={{ "--img": "url('/assets/images/pomegranate/pexels-aditya-bhatia-264152318-18142134.jpg')" } as React.CSSProperties} />
-          <div
-            className="photo"
-            style={{
-              "--img": "url('/assets/images/pomegranate/pexels-roman-odintsov-5150206.jpg')",
-              "--pos-y": "100%",
-              "--pos-x": "80%",
-              "--bg-size": "110%",
-            } as React.CSSProperties}
-          />
-
+          <div className="photo" style={{ position: 'relative' }}>
+            <Image
+              src="/assets/images/pomegranate/mockup-graphics-XiWQbLEhFyo-unsplash.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 60vw, 30vw"
+              style={{ objectFit: 'cover' }}
+              loading="lazy"
+            />
+          </div>
+          <div className="photo" style={{ position: 'relative' }}>
+            <Image
+              src="/assets/images/pomegranate/pexels-aditya-bhatia-264152318-18142134.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 60vw, 30vw"
+              style={{ objectFit: 'cover' }}
+              loading="lazy"
+            />
+          </div>
+          <div className="photo" style={{ position: 'relative' }}>
+            <Image
+              src="/assets/images/pomegranate/pexels-roman-odintsov-5150206.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 60vw, 30vw"
+              style={{ objectFit: 'cover', objectPosition: '80% 100%' }}
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

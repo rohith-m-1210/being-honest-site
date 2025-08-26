@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import Image from 'next/image';
 
 type Props = {
   images: string[];
@@ -97,9 +98,10 @@ export default function ExploreRail({ images, title = 'Explore the farms' }: Pro
             const mod = idxInBase % 6;
             const patterned = mod === 0 ? 'square' : mod === 2 ? 'tall' : mod === 3 ? 'wide' : mod === 4 ? 'tall' : 'square';
             const size = isHeroWide ? 'xwide' : isSecond ? 'wide' : patterned;
+            const sizes = "(max-width: 900px) 80vw, 50vw";
             return (
               <a key={src + i} href="/farm-code" className={`tile tile--${size}`} aria-label="Enter Farm Code">
-                <span className="tile-media" style={{ '--img': `url('${src}')` } as React.CSSProperties} />
+                <Image src={src} alt="" fill sizes={sizes} style={{ objectFit: 'cover' }} />
               </a>
             );
           })}
