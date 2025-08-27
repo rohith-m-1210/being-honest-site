@@ -86,7 +86,7 @@ export default function Home() {
       {/* Panels */}
       <section className="panels" aria-label="Story">
         <article className="panel">
-          <div className="panel-media">
+          <div className="panel-media panel-media--sm-desktop panel-media--up30d">
             <Image
               src="/assets/images/pomegranate/pexels-julia-volk-5272973.jpg"
               alt=""

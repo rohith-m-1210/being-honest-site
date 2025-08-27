@@ -124,6 +124,9 @@ img{max-width:100%; display:block}
   background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
 }
 .panel-media{position:relative; min-height:320px; background-image:var(--img); background-size:cover; background-position: var(--pos, center)}
+@media (min-width:900px){ .panel-media--sm-desktop{ min-height:256px } }
+/* desktop-only focal point: top-right, moved down 12% total (75% 32%) */
+@media (min-width:900px){ .panel-media--up30d img{ object-position: 75% 32% !important } }
 /* reverted: special contain-behavior removed to match other panels */
 .panel-copy{padding:20px 20px 28px}
 .panel h2{font-size:40px; margin:0 0 6px}
