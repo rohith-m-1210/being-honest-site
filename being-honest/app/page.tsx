@@ -292,10 +292,10 @@ export default function Home() {
             <div className="contact-block" aria-label="Contact">
               <div className="contact-title">Contact</div>
               <div className="contact-row">
-                <a className="phone" href="tel:+919966399588" aria-label="Call +91 99663 99588">+91 99663 99588</a>
+                <a className="phone" href="tel:+919966399XXX" aria-label="Call +91 99663 99XXX">+91 99663 99XXX</a>
                 <div className="contact-icons">
                   
-                  <a className="icon" title="WhatsApp" aria-label="Open WhatsApp chat" href="https://wa.me/919966399588" target="_blank" rel="noopener">
+                  <a className="icon" title="WhatsApp" aria-label="Open WhatsApp chat" href="https://wa.me/919966399XXX" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>
                       <path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.5 0 .24 5.26.24 11.78c0 2.07.54 4.05 1.57 5.81L0 24l6.58-1.73a11.8 11.8 0 0 0 5.48 1.4h.01c6.56 0 11.82-5.26 11.82-11.78 0-3.15-1.23-6.11-3.37-8.41ZM12.06 21.3h-.01a9.5 9.5 0 0 1-4.85-1.33l-.35-.2-3.9 1.02 1.04-3.8-.23-.38a9.51 9.51 0 0 1-1.47-5.12c0-5.24 4.28-9.5 9.55-9.5a9.4 9.4 0 0 1 6.75 2.8 9.4 9.4 0 0 1 2.8 6.7c0 5.24-4.28 9.51-9.53 9.51Zm5.48-7.14c-.3-.15-1.78-.88-2.06-.98-.28-.1-.49-.15-.7.15-.21.3-.8.98-.98 1.18-.18.2-.36.22-.66.07-.3-.15-1.23-.45-2.35-1.43-.86-.74-1.44-1.66-1.62-1.96-.18-.3-.02-.45.13-.6.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.7-1.68-.96-2.3-.25-.6-.5-.5-.7-.5l-.6-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.3 5.1 4.62.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35Z"/>
                     </svg>

@@ -516,3 +516,22 @@ dialog{border:none; padding:0; background:transparent; z-index:90; display:flex;
 .lb-nav{ position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.14); color:#fff; border:1px solid var(--line); width:40px; height:40px; border-radius:999px; cursor:pointer }
 .lb-nav.prev{ left:-4px }
 .lb-nav.next{ right:-4px }
+
+/* Inline standards line on product page */
+.std-inline{ padding:8px 20px 0 }
+.std-inline-static{ display:flex; justify-content:center }
+.std-inline-wrap{ max-width:1100px; margin:0 auto; display:flex; gap:14px; align-items:center; justify-content:center; text-transform:uppercase; letter-spacing:.12em; font-size:12px; font-weight:600; color:var(--muted); white-space:nowrap }
+.std-inline-wrap span:not(:last-child)::after{ content:" •"; opacity:.7; margin-left:14px }
+.std-inline-marquee{ display:none }
+@media (max-width:680px){
+  .std-inline-static{ display:none }
+  .std-inline-marquee{ display:block; overflow:hidden; mask-image: linear-gradient(to right, transparent 0, #000 8px, #000 calc(100% - 8px), transparent 100%) }
+  .std-inline-inner{ display:flex; width:max-content; animation: stdmarquee 21.333s linear infinite }
+  .std-inline-wrap{ font-size:11px; gap:10px; justify-content:flex-start; padding:0 6px }
+  .std-inline-wrap span:not(:last-child)::after{ margin-left:10px }
+}
+@keyframes stdmarquee { from{ transform: translateX(0) } to{ transform: translateX(-50%) } }
+
+/* Add a leading dot before the first item */
+.std-inline-wrap span:first-child::before{ content:"• "; opacity:.7; margin-right:14px }
+@media (max-width:680px){ .std-inline-wrap span:first-child::before{ margin-right:10px } }

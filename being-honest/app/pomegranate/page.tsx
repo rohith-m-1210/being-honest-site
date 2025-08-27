@@ -39,7 +39,8 @@ export default function PomegranatePage() {
             <ProductGallery
               images={[
                 "/assets/images/pomegranate/pexels-julia-volk-5272973.jpg",
-                "/assets/images/website/fatemeh-zakeri-lkflaFuiXII-unsplash.jpg",
+                "/assets/images/pomegranate/mockup-graphics-XiWQbLEhFyo-unsplash.jpg",
+                "/assets/images/pomegranate/pexels-aditya-bhatia-264152318-18142134.jpg",
                 "/assets/images/pomegranate/pexels-roman-odintsov-5150206.jpg",
               ]}
               altMain="Bhagwa pomegranate"
@@ -72,7 +73,7 @@ export default function PomegranatePage() {
               <div className="cta-row">
                 <a
                   className="btn primary"
-                  href="https://wa.me/919966399588?text=I'd%20like%20to%20pre-order%20pomegranates"
+                  href="https://wa.me/919966399XXX?text=I'd%20like%20to%20pre-order%20pomegranates"
                   target="_blank"
                   rel="noopener"
                 >
@@ -102,6 +103,33 @@ export default function PomegranatePage() {
                 </div>
               </details>
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* Standards inline (one line) */}
+      <section className="std-inline" aria-label="Our standard">
+        {/* Desktop/static */}
+        <div className="std-inline-static">
+          <div className="std-inline-wrap">
+            <span>NO ARTIFICIAL RIPENING</span>
+            <span>NO ADDED COLOUR &amp; SWEETNESS</span>
+            <span>NO SHINE &amp; WAX</span>
+          </div>
+        </div>
+        {/* Mobile/marquee */}
+        <div className="std-inline-marquee">
+          <div className="std-inline-inner">
+            <div className="std-inline-wrap">
+              <span>NO ARTIFICIAL RIPENING</span>
+              <span>NO ADDED COLOUR &amp; SWEETNESS</span>
+              <span>NO SHINE &amp; WAX</span>
+            </div>
+            <div className="std-inline-wrap">
+              <span>NO ARTIFICIAL RIPENING</span>
+              <span>NO ADDED COLOUR &amp; SWEETNESS</span>
+              <span>NO SHINE &amp; WAX</span>
+            </div>
           </div>
         </div>
       </section>

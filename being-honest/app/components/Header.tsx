@@ -61,7 +61,7 @@ export default function Header() {
         <a href="/" className="brand" aria-label="being honest">
           <img src="/assets/Asset 2.png" alt="" className="logo" width={170} height={28} />
         </a>
-        <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
+        <nav id="site-nav" suppressHydrationWarning className={`nav-links ${navOpen ? "open" : ""}`}>
           <a
             href="/our-purpose"
             className={pathname === "/our-purpose" ? "active" : ""}
