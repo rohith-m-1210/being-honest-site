@@ -124,6 +124,7 @@ img{max-width:100%; display:block}
   background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
 }
 .panel-media{position:relative; min-height:320px; background-image:var(--img); background-size:cover; background-position: var(--pos, center)}
+/* reverted: special contain-behavior removed to match other panels */
 .panel-copy{padding:20px 20px 28px}
 .panel h2{font-size:40px; margin:0 0 6px}
 .panel h3{font-size:28px; margin:0 0 6px}
@@ -379,9 +380,9 @@ dialog{border:none; padding:0; background:transparent; z-index:90; display:flex;
 .reviews-head p{color:var(--muted); margin:0 0 18px}
 .review-grid{display:grid; gap:14px; align-items:stretch}
 .review-card{border:1px solid var(--line); border-radius:20px; padding:16px 18px; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); display:flex; flex-direction:column}
-.review-quote{margin:0 0 12px; font-size:18px; line-height:1.7; margin-bottom:auto}
+.review-quote{margin:0 0 12px; font-size:16px; line-height:1.7; margin-bottom:auto; color: var(--muted); font-weight:400}
 .review-quote em{font-style:normal; text-decoration:underline dotted rgba(255,255,255,.4)}
-.review-meta{display:flex; gap:8px; align-items:baseline}
+.review-meta{display:flex; gap:8px; align-items:baseline; margin-top:12px}
 .review-meta strong{font-weight:700}
 .review-meta .muted{font-size:13px}
 @media (min-width:900px){ .review-grid{ grid-template-columns:1fr 1fr } }
