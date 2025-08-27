@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer" id="contact" suppressHydrationWarning>
       <div className="footer-grid">
         <div>
           <a href="/" className="brand brand--footer" aria-label="being honest">
