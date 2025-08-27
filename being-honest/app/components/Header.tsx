@@ -29,7 +29,7 @@ export default function Header() {
     if (typeof window === "undefined") return;
     if (pathname !== "/") return;
 
-    const ids = ["why", "stores", "faq"];
+    const ids = ["why", "stores", "faq", "contact"];
     const els = ids
       .map((id) => ({ id, el: document.getElementById(id) }))
       .filter((x): x is { id: string; el: HTMLElement } => x.el !== null) as { id: string; el: HTMLElement }[];
@@ -63,21 +63,11 @@ export default function Header() {
         </a>
         <nav id="site-nav" className={`nav-links ${navOpen ? "open" : ""}`}>
           <a
-            href="/#why"
-            className={pathname === "/" && active === "why" ? "active" : ""}
-            onClick={(e) => onSectionClick(e, "why")}
+            href="/our-purpose"
+            className={pathname === "/our-purpose" ? "active" : ""}
+            onClick={() => setNavOpen(false)}
           >
-            Why Slow
-          </a>
-          <a
-            href="/#stores"
-            className={pathname === "/" && active === "stores" ? "active" : ""}
-            onClick={(e) => onSectionClick(e, "stores")}
-          >
-            Stores
-          </a>
-          <a href="/faqs" className={pathname === "/faqs" ? "active" : ""} onClick={() => setNavOpen(false)}>
-            faqs
+            Our Purpose
           </a>
           <a
             href="/from-soil-to-soul"
@@ -86,11 +76,32 @@ export default function Header() {
           >
             From Soil to Soul
           </a>
-          <a href="/our-purpose" className={pathname === "/our-purpose" ? "active" : ""} onClick={() => setNavOpen(false)}>
-            Our Purpose
+          <a
+            href="/#why"
+            className={pathname === "/" && active === "why" ? "active" : ""}
+            onClick={(e) => onSectionClick(e, "why")}
+          >
+            Why Slow
+          </a>
+          <a href="/faqs" className={pathname === "/faqs" ? "active" : ""} onClick={() => setNavOpen(false)}>
+            faqs
+          </a>
+          <a
+            href="/#stores"
+            className={pathname === "/" && active === "stores" ? "active" : ""}
+            onClick={(e) => onSectionClick(e, "stores")}
+          >
+            stores
           </a>
           <a href="/blogs" className={pathname?.startsWith("/blogs") ? "active" : ""} onClick={() => setNavOpen(false)}>
-            Blogs
+            blogs
+          </a>
+          <a
+            href="/#contact"
+            className={pathname === "/" && active === "contact" ? "active" : ""}
+            onClick={(e) => onSectionClick(e, "contact")}
+          >
+            contact
           </a>
         </nav>
         <div className="nav-actions">
