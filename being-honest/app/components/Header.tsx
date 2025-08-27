@@ -91,17 +91,17 @@ export default function Header() {
             className={pathname === "/" && active === "stores" ? "active" : ""}
             onClick={(e) => onSectionClick(e, "stores")}
           >
-            stores
+            Stores
           </a>
           <a href="/blogs" className={pathname?.startsWith("/blogs") ? "active" : ""} onClick={() => setNavOpen(false)}>
-            blogs
+            Blogs
           </a>
           <a
             href="/#contact"
             className={pathname === "/" && active === "contact" ? "active" : ""}
             onClick={(e) => onSectionClick(e, "contact")}
           >
-            contact
+            Contact
           </a>
         </nav>
         <div className="nav-actions">
