@@ -77,6 +77,13 @@ export default function Header() {
             From Soil to Soul
           </a>
           <a
+            href="/pomegranate"
+            className={pathname === "/pomegranate" ? "active" : ""}
+            onClick={() => setNavOpen(false)}
+          >
+            Pomegranate
+          </a>
+          <a
             href="/#why"
             className={pathname === "/" && active === "why" ? "active" : ""}
             onClick={(e) => onSectionClick(e, "why")}
