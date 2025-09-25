@@ -73,7 +73,7 @@ export default function PomegranatePage() {
               <div className="cta-row">
                 <a
                   className="btn primary"
-                  href="https://wa.me/919966399XXX?text=I'd%20like%20to%20pre-order%20pomegranates"
+                  href="https://wa.me/919966399547?text=I'd%20like%20to%20pre-order%20pomegranates"
                   target="_blank"
                   rel="noopener"
                 >

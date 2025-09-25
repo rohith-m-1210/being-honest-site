@@ -185,7 +185,7 @@ img{max-width:100%; display:block}
 .contact-title{ font-weight:700 }
 .contact-row{ display:flex; gap:12px; align-items:center; flex-wrap:wrap }
 .contact-icons{ display:flex; gap:10px; align-items:center }
-.contact-icons .icon{ display:inline-flex; width:44px; height:44px; border:1px solid var(--line); border-radius:999px; align-items:center; justify-content:center; color:#fff; opacity:.95 }
+.contact-icons .icon{ display:inline-flex; width:44px; height:44px; border:1px solid var(--line); border-radius:999px; align-items:center; justify-content:center; color:#fff; opacity:1 }
 .contact-icons .icon svg{ width:22px; height:22px; display:block }
 .contact-icons .icon:hover{ background:rgba(255,255,255,.06) }
 .muted{color:var(--muted)}
