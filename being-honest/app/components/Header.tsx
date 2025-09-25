@@ -100,7 +100,7 @@ export default function Header() {
           >
             Stores
           </a>
-          <a href="/blogs" className={pathname?.startsWith("/blogs") ? "active" : ""} onClick={() => setNavOpen(false)}>
+          <a href="/blogs" style={{ display: "none" }} aria-hidden={true} tabIndex={-1}>
             Blogs
           </a>
           <a
