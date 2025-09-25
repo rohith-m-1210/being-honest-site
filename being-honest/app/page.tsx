@@ -150,13 +150,15 @@ export default function Home() {
       {/* Calm */}
       <section className="calm" aria-label="Calm break">
         <div className="calm-media">
-          <Image
-            src="/assets/images/Screenshot%202025-08-26%20at%204.38.58%E2%80%AFPM.png"
-            alt=""
-            fill
-            sizes="100vw"
-            style={{ objectFit: "cover" }}
-          />
+          <picture>
+            <source media="(max-width: 899px)" srcSet="/assets/images/calm-banner-mobile.jpeg" />
+            <img
+              src="/assets/images/calm-banner-desktop.jpeg"
+              alt=""
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              loading="lazy"
+            />
+          </picture>
         </div>
         <div className="calm-copy">
           <h2>We believe in slow.</h2>
