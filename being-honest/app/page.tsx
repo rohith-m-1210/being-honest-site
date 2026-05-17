@@ -43,7 +43,7 @@ export default function Home() {
             <span className="h1-soft">Fresh from</span> India’s finest farms <span>to you.</span>
           </h1>
           <p className="sub">
-            we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and our planet.
+            we’re driven to enhance the health of our community by providing ethically sourced fruits that support our bodies and planet.
           </p>
           <div className="cta">
             <a href="/farm-code" className="btn primary">Enter Farm Code</a>
